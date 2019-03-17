@@ -1,0 +1,13 @@
+{{define "profile"}}
+  {{if .Profile}}
+  <a href="/logout"> Logout </a>
+    <p>Name: {{.Profile.Name}}</p>
+    <p>Email: {{.Profile.Email}}</p>
+    <p>RE balance: {{.Balance}}</p>
+    <a href="/freere">Get more RE for free</a>
+    <p>AvatarURL: {{.Profile.AvatarURL}} <img src="{{.Profile.AvatarURL}}"></p>
+    <p>UserID: {{.Profile.UserID}}</p>
+  {{else}}
+    <a href="/auth/discord"> Login </a>
+  {{end}}
+{{end}}

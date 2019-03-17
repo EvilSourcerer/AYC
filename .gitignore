@@ -1,0 +1,9 @@
+# the binary created by go build
+/exchange
+# cool cats use windows. why isn't leij not in the cool cats club? ;(
+/exchange.exe
+
+# the log file
+/exchange.log
+output.txt
+.DS_Store

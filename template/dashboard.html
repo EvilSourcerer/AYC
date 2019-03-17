@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html style="height: 100%;margin:0;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>2b2tq</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body style="user-select: none;draggable: false;height: 100%;">
+    {{template "navbar" .}}
+    <div style="background-repeat: no-repeat;background-size: cover;height: 100%;width: 100%;margin-top: -56px;padding-top: 56px;background-image: url(&quot;assets/img/2b2t_BG_DARK.png&quot;);">
+        <div style="width: 80%;box-shadow: none;margin-left: 10%;position: relative;height: 80%;margin-top: 5%;background-color: rgba(30,30,30,0.73);">
+            <div>
+                <ul class="nav nav-tabs" style="border-bottom: 1px solid rgb(67,67,67);">
+                    <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1" style="color: rgb(142,142,142);border-radius: 0;border: none;">Your Items</a></li>
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2" style="border: none;border-radius: 0;color: rgb(142,142,142);">Marketplace</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="tab-1">
+                        <div class="d-flex align-items-center my-item" style="width: 96%;margin-left: 2%;height: 60px;margin-top: 1%;background-color: rgba(62,62,62,0.66);">
+                            <h1 style="margin-left: 1%;font-size: 23px;color: rgb(255,255,255);font-weight: normal;font-style: normal;margin-top: 5px;">Alpha's Stacked 32ks</h1>
+                            <h1 style="margin-left: auto;margin-right: 1%;font-size: 23px;color: rgb(255,255,255);font-weight: normal;font-style: normal;margin-top: 5px;">Selling for 15 R€</h1><button class="btn btn-primary" type="button" style="border-radius: 0;box-shadow: none;border: none;padding-top: 0px;padding-bottom: 5px;padding-left: 10px;padding-right: 10px;margin-right: 1%;background-color: rgba(255,255,255,0.22);"
+                                data-toggle="modal" data-target="#delete-item"><i class="typcn typcn-download" style="font-size: 24px;"></i></button></div>
+                        <div class="d-flex align-items-center my-item" style="width: 96%;margin-left: 2%;height: 60px;margin-top: 1%;background-color: rgba(62,62,62,0.66);">
+                            <h1 style="margin-left: 1%;font-size: 23px;color: rgb(255,255,255);font-weight: normal;font-style: normal;margin-top: 5px;">McGapps</h1>
+                            <h1 style="margin-left: auto;margin-right: 1%;font-size: 23px;color: rgb(255,0,0);font-weight: normal;font-style: normal;margin-top: 5px;">Pending Deposit</h1><button class="btn btn-primary" type="button" style="border-radius: 0;box-shadow: none;border: none;padding-top: 0px;padding-bottom: 5px;padding-left: 10px;padding-right: 10px;margin-right: 1%;background-color: rgba(255,255,255,0.22);"
+                                data-toggle="modal" data-target="#cancel-deposit"><i class="typcn typcn-cancel" style="font-size: 24px;"></i></button></div>
+                        <div class="d-flex align-items-center" id="additem" style="display: block;transition: background-color 0.5s,transform .5s;width: 96%;margin-left: 2%;height: 60px;margin-top: 1%;text-align: center;border: dashed 2px rgb(99,99,99);"
+                            data-toggle="modal" data-target="#add-item">
+                            <h1 style="display: block;margin-left: auto;margin-right: auto;width: 100%;font-size: 23px;color: rgb(130,130,130);font-weight: normal;font-style: normal;margin-top: 5px;">+</h1>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-2">
+                        <div class="d-flex align-items-center" style="padding-left: 2%;padding-top: 2%;border-radius: 0;"><button class="btn btn-primary" type="button" style="box-shadow: none;border-radius: 0px;background-color: rgba(255,255,255,0.19);border: 0;font-size: 16px;" data-toggle="modal" data-target="#item-filters"><i class="fas fa-sliders-h" style="font-size: 16px;"></i><span class="pull-right" style="margin-left: 5px;float: right;font-size: 16px;">Item filters...</span></button></div>
+                        <div
+                            class="d-flex align-items-center totem-shulk" style="width: 96%;margin-left: 2%;height: 60px;margin-top: 1%;background-color: rgba(62,62,62,0.66);">
+                            <h1 style="margin-left: 1%;font-size: 23px;color: rgb(255,255,255);font-weight: normal;font-style: normal;margin-top: 5px;">A can of worms</h1>
+                            <h1 style="margin-left: auto;margin-right: 1%;font-size: 23px;color: rgb(255,255,255);font-weight: normal;font-style: normal;margin-top: 5px;">15 R€</h1><button class="btn btn-primary" type="button" style="border-radius: 0;box-shadow: none;border: none;padding-left: 10px;padding-right: 10px;margin-right: 1%;background-color: rgba(255,255,255,0.22);">Buy</button></div>
+                    <div
+                        style="position: absolute;bottom: 0;text-align: center;height: 6%;width: 100%;background-color: rgba(0,0,0,0.31);"><button class="btn btn-primary" type="button" style="border-radius: 0;border: none;box-shadow: none;height: 100%;width: 9%;padding-top: 3px;background-color: rgba(211,211,211,0.12);">&lt;&lt;</button><button class="btn btn-primary"
+                            type="button" style="border-radius: 0;border: none;box-shadow: none;height: 100%;width: 9%;padding-top: 3px;background-color: rgba(211,211,211,0.25);">1</button><button class="btn btn-primary" type="button" style="border-radius: 0;border: none;box-shadow: none;height: 100%;width: 9%;padding-top: 3px;background-color: rgba(211,211,211,0.12);">&gt;&gt;</button></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="preview">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-radius: 0;border: none;background-color: #1e1e1e;">
+                    <h4 class="modal-title" style="color: rgb(156,156,156);">Preview</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" style="background-color: #2d2d2d;"><img src="assets/img/star-sky.jpg" style="width: 90%;height: 90%;margin-left: 5%;" draggable="false"></div>
+                <div class="modal-footer" style="border: none;background-color: #222222;"><button class="btn btn-light" type="button" data-dismiss="modal" style="background-color: rgb(13,13,13);border: none;color: rgb(135,135,135);">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="item-filters">
+        <div class="modal-dialog" role="document" style="max-width: 90%;max-height: 90%;height: 90%;">
+            <div class="modal-content" style="height: 100%;">
+                <div class="modal-header" style="background-color: #2f2f2f;color: rgb(255,255,255);border-bottom: none;">
+                    <h4 class="modal-title" style="color: rgb(123,123,123);">Item Filters</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="color: white;opacity: 1;">×</span></button></div>
+                <div class="modal-body" style="background-color: #292929;">
+                    <div class="card" style="background-color: rgba(64,64,64,0);">
+                        <div class="card-group">
+                            <div class="card" style="margin-left: 3px;margin-right: 3px;background-color: #363636;border: none;border-radius: 0px;">
+                                <div class="card-body" style="text-align: center;border: none;background-color: #363636;border-radius: 0px;">
+                                    <h4 class="card-title" style="text-align: center;color: rgb(187,187,187);">Stacked 32k Swords</h4><img src="assets/img/star-sky.jpg" style="width: 90%;" draggable="false"></div>
+                            </div>
+                            <div class="card" style="margin-left: 3px;margin-right: 3px;background-color: #363636;border: none;border-radius: 0px;">
+                                <div class="card-body" style="text-align: center;border: none;background-color: #363636;border-radius: 0px;">
+                                    <h4 class="card-title" style="text-align: center;color: rgb(187,187,187);">Stacked 32k Swords</h4><img src="assets/img/star-sky.jpg" style="width: 90%;" draggable="false"></div>
+                            </div>
+                            <div class="card" style="margin-left: 3px;margin-right: 3px;background-color: #363636;border: none;border-radius: 0px;">
+                                <div class="card-body" style="text-align: center;border: none;background-color: #363636;border-radius: 0px;">
+                                    <h4 class="card-title" style="text-align: center;color: rgb(187,187,187);">Stacked 32k Swords</h4><img src="assets/img/star-sky.jpg" style="width: 90%;" draggable="false"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border: none;background-color: #262626;"><button class="btn btn-light" type="button" data-dismiss="modal" style="background-color: rgba(78,78,78,0.44);border: 0;color: rgb(177,177,177);box-shadow: none;">Close</button><button class="btn btn-primary" type="button">Select</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="delete-item">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border: none;background-color: #222222;color: rgb(193,193,193);">
+                    <h4 class="modal-title">Withdraw Item</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" style="background-color: #2c2c2c;">
+                    <p style="color: rgb(176,176,176);">Are you <strong>SURE </strong>that you would like to withdraw this item from the marketplace?&nbsp;</p>
+                </div>
+                <div class="modal-footer" style="border: none;background-color: #373737;"><button class="btn btn-light" type="button" data-dismiss="modal" style="border: none;background-color: rgb(41,41,41);color: rgb(159,159,159);">Close</button><button class="btn btn-primary" type="button" style="box-shadow: none;border: none;background-color: rgb(255,0,0);">Withdraw</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="cancel-deposit">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-radius: 0;border: none;background-color: #222222;color: rgb(193,193,193);">
+                    <h4 class="modal-title">Cancel Deposit</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" style="background-color: #2c2c2c;">
+                    <p style="color: rgb(176,176,176);">Are you <strong>SURE </strong>that you would like to cancel this deposit?</p>
+                </div>
+                <div class="modal-footer" style="border: none;background-color: #373737;"><button class="btn btn-light" type="button" data-dismiss="modal" style="border: none;background-color: rgb(41,41,41);color: rgb(159,159,159);">Close</button><button class="btn btn-primary" type="button" style="box-shadow: none;border: none;background-color: rgb(255,0,0);">Cancel Deposit</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="add-item">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-radius: 0;border: none;background-color: #222222;color: rgb(193,193,193);">
+                    <h4 class="modal-title">Add Item to Marketplace</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="color: rgb(255,255,255);">×</span></button></div>
+                <div class="modal-body" style="text-align: center;background-color: #2c2c2c;">
+                    <div>
+                        <div class="dropdown" style="box-shadow: none;"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="box-shadow: none;border: none;background-color: rgb(38,38,38);">Select a Category</button>
+                            <div class="dropdown-menu"
+                                role="menu" style="background-color: rgb(38,38,38);"><a class="dropdown-item" role="presentation" href="#" style="color: rgb(170,170,170);">Totems</a><a class="dropdown-item" role="presentation" href="#" style="color: rgb(170,170,170);">Stacked 32ks</a><a class="dropdown-item"
+                                    role="presentation" href="#" style="color: rgb(170,170,170);">Stacked Milk</a><a class="dropdown-item" role="presentation" href="#" style="color: rgb(170,170,170);">Stacked Totems</a></div>
+                        </div>
+                    </div><img src="assets/img/star-sky.jpg" style="width: 90%;margin-top: 3%;"></div>
+                <div class="modal-footer" style="border: none;background-color: #373737;"><button class="btn btn-light" type="button" data-dismiss="modal" style="border: none;background-color: rgb(41,41,41);color: rgb(159,159,159);">Close</button></div>
+            </div>
+        </div>
+    </div><script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+<script>
+    var totems = document.getElementsByClassName("totem-shulk");
+    for (var i = 0; i < totems.length; i++) {
+        totems[i].addEventListener("click", function() {
+            this.setAttribute("data-toggle","modal");
+            this.setAttribute("data-target","#preview");
+        });
+    }
+</script>
+<script src="/assets/js/getcategories.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

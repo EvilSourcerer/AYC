@@ -1,0 +1,21 @@
+{{define "navigation"}}
+  <marquee>
+    {{range .Navigation}}
+    <div style="float:left;padding-right:300px">
+      <img src="{{.ItemInfo.ItemPhoto}}" style="float:left;height:100%"/>
+      <a href="/trade/{{.ItemInfo.ListingID}}" style="float:left">
+        <div style="float:left">
+          {{.ItemInfo.ItemName}}
+          <br />
+          {{.ItemInfo.Server}}
+        </div>
+      </a>
+      <div>
+        Ask: {{.Ask}}
+        <br />
+        Bid: {{.Bid}}
+      </div>
+    </div>
+    {{end}}
+  </marquee>
+{{end}}

@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <meta charset="UTF-8">
+
+    <title>2b2tq v2</title>
+  </head>
+
+  <body>
+    <div id="header">
+      {{template "navigation" .}}
+    </div>
+    <div id="sidebar">
+      {{template "profile" .}} <!-- template/profile.html -->
+    </div>
+    <div id="main">
+      <div id="itemname">
+        {{.ItemInfo.ItemName}}
+        <br />
+        <i> On {{.ItemInfo.Server}} </i>
+      </div>
+      <div id="iteminfo">
+        <div id="image">
+          <img src="{{.ItemInfo.ItemPhoto}}" alt="image placeholder">
+        </div>
+        <div id="statistics">
+          {{range .BotStatuses}} <!-- this section, from range to end, is repeated for every bot that's connected. if there's no bot this doesn't appear at all. it's a for loop over all the bot statuses -->
+              <form method="get" action="/ender_chest">
+                <input type="submit" value="Ender chest" />
+              </form>
+              <br/>
+              X: {{.X}}
+              <br/>
+              Y: {{.Y}}
+              <br/>
+              Z: {{.Z}}
+          {{end}}
+        </div>
+      </div>
+      <div id="market">
+        <div id="buyorders">
+          {{if gt .Info.Sells.Count 0}}
+            <div class="num">
+              {{.Info.Sells.Count}}
+            </div>
+            for sale
+            <div class="price">
+              for {{.Info.Sells.Bestprice}} and higher
+            </div>
+          {{else}}
+            <div class="num">
+              Zero
+            </div>
+            open sell orders
+            <div class="price">
+              &nbsp;
+            </div>
+          {{end}}
+
+          <button class="button">buy</button>
+        </div>
+        <div id="sellorders">
+          {{if gt .Info.Buys.Count 0}}
+            <div class="num">
+              {{.Info.Buys.Count}}
+            </div>
+            buy order{{if gt .Info.Buys.Count 1}}s{{end}}
+            <div class="price">
+              for {{.Info.Buys.Bestprice}} and lower
+            </div>
+          {{else}}
+            <div class="num">
+              Zero
+            </div>
+            open buy orders
+            <div class="price">
+              &nbsp;
+            </div>
+          {{end}}
+          <button class="button">sell</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

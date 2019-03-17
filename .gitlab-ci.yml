@@ -1,0 +1,25 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: golang:latest
+  before_script:
+    # some cancer i copied from
+    # https://github.com/lifechurch/example-go/blob/master/.gitlab-ci.yml
+    # to make it use the vendor/ folder instead of fetching anew
+    - export GL_URL=$(echo $CI_PROJECT_URL | awk -F/ '{print $3}')
+    - export GO_PROJECT_PATH="$GOPATH/src/$GL_URL/$CI_PROJECT_NAMESPACE"
+    - mkdir -p $GO_PROJECT_PATH
+    - ln -s $(pwd) $GO_PROJECT_PATH
+    - export GO_PROJECT_PATH="$GO_PROJECT_PATH/$CI_PROJECT_NAME"
+    - cd $GO_PROJECT_PATH
+  script:
+    - go version
+    - go env
+    - diff -u <(echo -n) <(gofmt -d -s *.go)
+    - go tool vet *.go
+    - go build
+    - ls -la exchange
+    - go test . # immediately fail without waiting for the super slow race test
+    - go test -race .
